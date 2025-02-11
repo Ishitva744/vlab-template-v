@@ -71,13 +71,17 @@ function copyCode(elementId) {
 
 const questions = [
     {
-        question: " Q1) Which of the following is/are valid searching algorithms?",
-        choices: ["Linear Search", "Bubble Sort", "Binary Search", "Quick Sort"],
-        correctAnswers: [0, 2] // Correct answers are indexes 0 and 2
+        question: "Q1) Which of the following statements is true?",
+        choices: ["A for loop can only be used with lists."
+        , "A while loop must have an explicit condition that eventually evaluates to False.", 
+        "A while loop is always more efficient than a for loop.", 
+        " A for loop cannot be nested inside another for loop."],
+        correctAnswers: [1] // Correct answers are indexes 1
     },
     {
-        question: " Q2) What is/are the time complexity of linear search?",
-        choices: ["O(log n)", "O(n)", "O(n^2)", "O(1)"],
+        question: " Q2) What is the purpose of the continue statement in a while loop?",
+        choices: ["a) It terminates the loop.", "b) It skips the current iteration and moves to the next iteration.",
+         "c) It restarts the loop.", "d) It causes the loop to exit immediately."],
         correctAnswers: [1] // Correct answer is index 1
     }
 ];

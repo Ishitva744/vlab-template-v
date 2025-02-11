@@ -41,7 +41,7 @@ body {
 
 .vlab {
   left: 50%;
-  font-size:xx-large;
+  font-size: xx-large;
   font-weight: bold;
 }
 .nav-menu {
@@ -54,10 +54,9 @@ body {
     align-items: center;
   }
   .vlab {
-    margin-left: 15px; 
+    margin-left: 15px;
   }
 }
-
 
 .menu-toggle {
   display: none;
@@ -66,7 +65,7 @@ body {
   font-weight: bold;
   padding-right: 10px;
 }
-.close-btn{
+.close-btn {
   display: none;
 }
 .nav-menu {
@@ -144,17 +143,17 @@ body {
 /* Responsive styles */
 @media screen and (max-width: 840px) {
   .header {
-    justify-content: space-between; 
+    justify-content: space-between;
   }
   .logo-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
   }
   .menu-toggle {
     display: block;
   }
-  .close-btn{
+  .close-btn {
     display: block;
   }
 
@@ -174,7 +173,7 @@ body {
     right: 0;
   }
   .navigation .link {
-    margin-top: 14px ;
+    margin-top: 14px;
     margin-left: 6px;
   }
 }
@@ -301,12 +300,14 @@ body {
 
 /* tnt */
 /* Lists styling */
-.ref-list, .tools-list {
+.ref-list,
+.tools-list {
   list-style: none;
   padding-left: 20px;
 }
 
-.ref-list li, .tools-list li {
+.ref-list li,
+.tools-list li {
   padding: 5px 0;
   font-size: 16px;
   color: #555;
@@ -356,7 +357,7 @@ body {
     padding: 10px;
     font-size: 0.5rem;
     border: 2px solid rgb(215, 211, 211);
-    margin-top: 5px ;
+    margin-top: 5px;
     margin-left: 6px;
     border-radius: 14px;
   }
@@ -386,4 +387,62 @@ body {
   #code.container {
     width: 330px;
   }
+}
+
+.content {
+  padding: 20px;
+}
+
+.obsv-image1 {
+  height: 250px;
+  width: 500px;
+  margin: 50px 350px;
+}
+
+.obsv-image2 {
+  height: 400px;
+  width: 400px;
+  margin-left: 350px;
+}
+/* 
+Practice CSS
+*/
+
+.content-practice {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+}
+
+.pattern-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 5px;
+  padding: 20px;
+  border: 1px solid black;
+  width: 40%;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+#code-container {
+  margin: 10px 5px;
+  border: 1px solid black;
+  padding: 20px;
+  width: 60%;
+  min-height: 200px;
+  min-width: 200px;
+  overflow: scroll;
+}
+
+.variables-display {
+  margin: 10px 5px;
+  border: 1px solid black;
+  padding: 20px;
+  width: 40%;
+  min-height: 200px;
+  min-width: 200px;
 }
