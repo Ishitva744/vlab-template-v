@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS Compiler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            height: 80%;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .editor-container {
+            display: flex;
+            flex-direction: column;
+            height: 50%;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .editor {
+            height: 90%;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            resize: vertical;
+            overflow: auto;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .buttons button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buttons button:hover {
+            background-color: #45a049;
+        }
+
+        #output {
+            padding: 10px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            min-height: 100px;
+            font-size: 14px;
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: 10px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="editor-container">
+            <textarea id="codeInput" class="editor" placeholder="Write your JavaScript code here..."></textarea>
+            <div class="buttons">
+                <button id="runCodeButton">Run Code</button>
+            </div>
+        </div>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        // Select the code input and output elements
+        const codeInput = document.getElementById('codeInput');
+        const outputElement = document.getElementById('output');
+
+        // Override the default console.log to display logs in the output section
+        console.log = function(message) {
+            outputElement.textContent += message + '\n';  // Append each log to the output area
+        };
+
+        // Add event listener for running code when button is clicked
+        document.getElementById('runCodeButton').addEventListener('click', function () {
+            const code = codeInput.value;  // Get the code written by the user
+            outputElement.textContent = '';  // Clear previous output
+            try {
+                // Try to run the JavaScript code using eval
+                eval(code);  // eval runs the code entered
+            } catch (error) {
+                // If there's an error, display the error message
+                outputElement.textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>
