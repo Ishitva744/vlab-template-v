@@ -389,9 +389,7 @@ body {
   }
 }
 
-
 /* Added css  */
-
 
 .container .content {
   padding: 20px;
@@ -403,14 +401,13 @@ body {
   display: flex;
   width: 100%;
   flex-direction: column;
-  align-items: center
+  align-items: center;
 }
 
 .obsv-image1 {
   padding: 20px;
   height: 250px;
   width: 450px;
-  
 }
 
 .obsv-image2 {
@@ -418,13 +415,12 @@ body {
   width: 400px;
 }
 
-@media screen and (max-width: 426px){
+@media screen and (max-width: 426px) {
   .obsv-image1 {
     height: 180px;
     width: 300px;
-    
   }
-  
+
   .obsv-image2 {
     height: 200px;
     width: 200px;
@@ -441,7 +437,6 @@ body {
   font-size: 12px;
 }
 
-
 /* 
 Practice CSS
 */
@@ -449,7 +444,7 @@ Practice CSS
 .content .text {
   display: flex;
   flex-direction: column;
-  width:40%;
+  width: 40%;
 }
 
 .text button {
@@ -465,10 +460,11 @@ Practice CSS
   padding: 5px;
   color: #fff;
   border-radius: 5px;
-  transition: .2s;
+  transition: 0.2s;
 }
 
-.text input, select {
+.text input,
+select {
   margin-top: 10px;
   padding: 5px;
 }
@@ -484,20 +480,32 @@ Practice CSS
 .content-practice button:hover {
   background-color: #fff;
   padding: 7px;
-  color:  rgb(0, 52, 65, 1); 
+  color: rgb(0, 52, 65, 1);
   border: 1px solid black;
   border-radius: 5px;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 .content-practice {
-  margin-top:20px;
+  margin-top: 20px;
   display: grid;
-  grid-template-columns: 60% 60%;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 20px;
   padding: 15px;
   justify-items: center;
   align-items: center;
-  justify-content: center;
+}
+
+@media screen and (max-width:426px) {
+  .content-practice {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 15px;
+    justify-items: center;
+    align-items: center;
+  }
 }
 
 .pattern-container {
@@ -524,9 +532,9 @@ Practice CSS
 }
 
 .variables-display {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  padding:20px;
+  padding: 20px;
   border: 1px solid #dba6a6;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -534,5 +542,3 @@ Practice CSS
   min-height: 200px;
   min-width: 200px;
 }
-
-
