@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="description" content="brief description" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Add your V-Lab Title here</title>
+  <title>Loops Vlab</title>
   <link rel="icon" href="images/vlab-logo.png" type="image/x-icon" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet"
@@ -45,7 +45,7 @@
 
 
   <div class="yourvlabtitle">
-    <h1>your vlab title</h1>
+    <h1>Mastering Iterations: Exploring For Loops and Nested Loops</h1>
   </div>
 
   <div class="pageview">
@@ -104,7 +104,12 @@
       <div class="container" id="aim">
         <div class="title">Aim</div>
         <div class="content">
-          <p>The aim of your Virtual lab</p>
+          <p>In this virtual lab, students will gain hands-on experience 
+              with for loops and nested loops. By engaging in interactive exercises,
+              they will understand how loops can simplify repetitive tasks, manage complex 
+              iterations, and enhance their coding efficiency. This lab aims to demystify 
+              the iteration process, making it accessible and intuitive for all learners
+            </p>
         </div>
       </div>
 
@@ -112,31 +117,28 @@
       <div class="container" id="theory">
         <div class="title">Theory & Applications</div>
         <div class="content">
-          <p>
-            This section covers the fundamental theories and applications of
-            the concept.
-          </p>
-
-          <span>Key Concepts</span>
-          <ul>
-            <li>Fundamentals of Data Structures</li>
-            <li>
-              Algorithms and Their Applications
-              <ul>
-                <li>Sorting Algorithms</li>
-                <li>Searching Algorithms</li>
-              </ul>
-            </li>
-            <li>Time Complexity Analysis</li>
-          </ul>
-
-          <span>Applications in Real World</span>
-          <ol>
-            <li>Application of Sorting Algorithms in Search Engines</li>
-            <li>Machine Learning Algorithms in Predictive Analytics</li>
-            <li>Data Structures in Web Development</li>
-          </ol>
-
+          <p class="desc">
+            Loops are fundamental constructs in programming that allow us to execute a block of code repeatedly. They are essential for tasks that require iteration, 
+            such as processing items in a list, generating sequences, or performing repetitive calculations.
+            <br><br>
+            <b>For Loops</b>
+            <br>
+            A for loop is used to iterate over a sequence (such as a list, tuple, dictionary, set, or string).
+            The syntax is straightforward and allows for easy traversal of elements.
+            <br><br>
+            <b>Nested For Loops</b>
+            <br>
+            Nested loops are loops within loops. 
+            They are useful for working with multi-dimensional data structures, such as lists of lists (matrices).
+            <br><br>
+            <b>Benefits of Using Loops</b>
+            <br>
+            <ul style="margin-left:20px;">
+              <li><b>Efficiency:</b> Loops reduce the need for repetitive code, making programs more efficient and easier to read.</li>
+              <li><b>Automation</b> They automate repetitive tasks, saving time and reducing the likelihood of errors.</li>
+              <li><b>Flexibility:</b> Loops can handle varying amounts of data, making them adaptable to different sceneriors.</li>
+            </ul>
+            </p>
         </div>
       </div>
 
@@ -144,69 +146,215 @@
       <div class="container" id="procedure">
         <div class="title">Procedure</div>
         <div class="content">
-          <p>
-            This section provides the steps and procedure for implementing the
-            concept discussed above.
-          </p>
+          <p class="desc1">What we are going to do, i.e. the steps involved.</p><br>
+              <h4>Execution of a <b>For</b> Loop</h4><br>
+              <ol style="margin-left:10px;" type="i">
+                <li>Initialization: The loop control variable is initialized (e.g., i = 0).</li>
+                <li>Condition Check: The loop checks if the condition is true (e.g., i < 10). If true, it executes the loop body.</li>
+                <li>Loop Body: The statements inside the loop are executed.</li>
+                <li>Update: The loop control variable is updated (e.g., i += 1).</li>
+                <li>Recheck Condition: The loop checks the condition again. If true, it repeats; if false, the loop terminates.</li>
+            </ol>
+            <div class="normal">
+                    <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190328142225/loop2.png"
+                    alt="" class="obsv-image1">    
+                <div class="caption">Fig 1.1 Flowchart of for loop</div>
+            </div>
+            
 
-          <span>Steps for Sorting Algorithms</span>
-          <ol>
-            <li>Choose the appropriate sorting algorithm based on data</li>
-            <li>Apply the sorting algorithm to the dataset</li>
-            <li>Analyze the time complexity and performance</li>
-          </ol>
-
-          <span>Steps for Implementing Search Algorithms</span>
-          <ul>
-            <li>Identify the data structure to be used</li>
-            <li>
-              Choose the best search algorithm (e.g., Linear Search, Binary
-              Search)
-            </li>
-            <li>Test the algorithm on various datasets</li>
-          </ul>
+            <h4>Execution of a while Loop</h4><br>
+            <p class="desc">
+               <ol>
+                <li>Condition Check: The loop checks if the condition is true (e.g., i < 10). If true, it executes the loop body.</li>
+                <li>Loop Body: The statements inside the loop are executed. The control variable should be updated inside the loop to ensure the condition eventually becomes false.</li>
+                <li>Recheck Condition: After the loop body, the condition is checked again. If true, it repeats; if false, the loop terminates.</li>
+              </ol>
+            </p>
+            <div class="normal">
+              <img src="https://www.programiz.com/sites/tutorial2program/files/python-while-loop-flowchart.png"
+                    alt="" class="obsv-image2">
+                <div class="caption">Fig 1.2 Flowchart of while loop</div>
+            </div>
         </div>
       </div>
 
       <!-- Code -->
       <div class="container" id="code">
-        <div class="title">Code</div>
-        <p>Example programs</p>
-        <div class="switch-container">
-          <input class="togswt" type="radio" id="cppRadio" name="codeSwitch" checked />
-          <label for="cppRadio">C++</label>
+        <div class="title">Code
+          <h5>Javascript Code Compiler</h5>
+        </div>
+        <div class="content", style="justify-content: center;">
+          <iframe frameBorder="0" height="450px" id="oc-editor" title="Code-Runner" src="./embed.html" width="100%" allow="fullscreen"></iframe>
+          <p>Example programs</p>
+          <div class="switch-container">
+          <input class="togswt" type="radio" id="pyramidRadio" name="codeSwitch"/>
+          <label for="pyramidRadio">Pyramid</label>
+          
+          <input class="togswt" type="radio" id="rpyramidRadio" name="codeSwitch"/>
+          <label for="rpyramidRadio">Reverse Pyramid</label>
 
-          <input class="togswt" type="radio" id="pythonRadio" name="codeSwitch" />
-          <label for="pythonRadio">Python</label>
+          <input class="togswt" type="radio" id="squareRadio" name="codeSwitch"/>
+          <label for="squareRadio">Square Grid</label>
+
+          <input class="togswt" type="radio" id="diamondRadio" name="codeSwitch"/>
+          <label for="diamondRadio">Diamond</label>
+          
         </div>
 
         <div class="code-blocks">
-          <div id="cppCode" class="code-block active">
+          <div id="pyramidCode" class="code-block ">
             <div class="code-content">
-              <pre><code class="language-cpp">// C++ Code Example</code></pre>
+              <pre><code class="language-js">
+//Code for Pyramid Pattern
+let num = 5; //change number of rows
+let pattern = '';
+for (let i = 0; i < num; i++) {
+  for (let j = 0; j < (num - i - 1); j++) {
+    pattern += '  '; // Add spaces
+  }
+  for (let k = 0; k < (2 * i + 1); k++) {
+    pattern += '* '; // Add stars
+  } 
+  pattern += '\n';
+}
+console.log(pattern);
+              </code></pre>
               <button class="copy-button">Copy</button>
             </div>
           </div>
-          <div id="pythonCode" class="code-block">
+
+          <div id="rpyramidCode" class="code-block ">
             <div class="code-content">
-              <pre><code class="language-python"># Python Code Example</code></pre>
+              <pre><code class="language-js">
+//Code for Reverse Pyramid Pattern
+let num = 5; //change number of rows
+let pattern = '';
+for (let i = 0; i < num; i++) {
+  for (let j = 0; j < i; j++) {
+    pattern += '  '; // Add spaces
+  }
+  for (let k = 0; k < (2 * (num - i) - 1); k++) {
+    pattern += '* '; // Add stars
+  }
+  pattern += '\n';
+}
+console.log(pattern);
+              </code></pre>
               <button class="copy-button">Copy</button>
             </div>
           </div>
+
+          <div id="squareCode" class="code-block ">
+            <div class="code-content">
+              <pre><code class="language-js">
+//Code for Square Grid Pattern
+let num = 5; //change number of rows
+let pattern = '';
+for (let i = 0; i < num; i++) {
+  pattern += '* '; // Add stars
+  pattern += '\n';
+}
+console.log(pattern);
+              </code></pre>
+              <button class="copy-button">Copy</button>
+            </div>
+          </div>
+
+          <div id="diamondCode" class="code-block ">
+            <div class="code-content">
+              <pre><code class="language-js">
+//Code for Diamond Pattern
+let num = 5; //change number of rows
+let pattern = '';
+  
+let num1 =  Math.ceil(num/2);
+let num2 = Math.floor(num/2);
+
+for (let i = 0; i < num1; i++) { // upward pyramid
+    for (let j = 0; j < (num1 - i - 1); j++) {
+        pattern += '  '; // Add spaces
+    }
+    for (let k = 0; k < (2 * i + 1); k++) {
+        pattern += '* '; // Add stars
+    } 
+    pattern += '\n';
+}
+pattern+='  '; // extra space to shift pyramid to right
+for (let i = 0; i < num2; i++) { // downward pyramid
+    for (let j = 0; j < i; j++) {
+        pattern += '  '; // Add spaces
+    }
+    for (let k = 0; k < (2 * (num2 - i) - 1); k++) {
+        pattern += '* '; // Add stars
+    }
+pattern += '\n  '; //extra space
+}
+
+console.log(pattern);   //printing star to console
+              </code></pre>
+              <button class="copy-button">Copy</button>
+            </div>
+          </div>
+          
+        </div>
         </div>
       </div>
 
       <!-- Practice -->
       <div class="container" id="practice">
         <div class="title">Practice</div>
-        <div class="content"></div>
+        <div class="content" style="justify-items: center;">
+          <div class="text">
+            1. Enter the number of rows:
+            <input type="number" id="rows" value="0" required onchange="toggleSubmit()"/><br>
+            2. Select type of pattern:
+            <select id="type" onchange="toggleSubmit()">
+              <option value="sgrid" selected>Square Grid</option>
+              <option value="pyramid">Pyramid</option>
+              <option value="rpyramid">Reverse pyramid</option>
+              <option value="diamond">Diamond</option>
+            </select>
+            <br />
+            <button id="submit" class="submitButton">Submit</button>
+          </div>
+            <div class="content-practice">
+      
+              <div class="pattern-container" id="pattern-container"></div>
+              
+              <button id="next" disabled>Next Step</button>
+              
+              <div class="variables-display" id="variables-display">
+                Current Values 
+                <br>
+                <p id="current-values">
+                  i = <span id="i-value"></span><br>
+                  j = <span id="j-value"></span><br>
+                  k = <span id="k-value"></span><br>
+                </p> <br>
+                <p>Current Pattern Value:</p> <br>
+                <pre id="pattern-value"></pre>
+              </div>
+              
+
+              
+            </div>
+        </div>
       </div>
 
       <!-- Results -->
       <div class="container" id="result">
         <div class="title">Result</div>
         <div class="content">
-          <p>Result of your vlab</p>
+          <p><b>For Loop:</b>
+              
+                  <li>The for loop is ideal when the number of iterations is known in advance. It runs a predefined number of times based on the range or condition set.</li>
+                  <li>It is easier to read and understand for repetitive tasks with a known range (e.g., printing a sequence of numbers).</li>
+              
+              <br>
+              <b>While Loop:</b>
+              <li>The while loop is more suited for situations where the number of iterations is not known beforehand and is dependent on a condition.</li>
+              <li>It offers more flexibility, but requires careful handling to avoid infinite loops and ensure termination.</li>
+          </p>
         </div>
       </div>
 
@@ -244,10 +392,10 @@
         <div class="content">
           <ul class="ref-list">
             <li>
-              <span> refernce 1 </span>
-            </li>
-            <li>
-              <span> refernce 2 </span>
+              <span> Geeks for Geeks </span>
+              </li>
+              <li>
+                <span> W3 School</span>
             </li>
           </ul>
         </div>
@@ -260,13 +408,19 @@
           <h3>Students</h3>
           <ul class="ref-list">
             <li>
-              <a href="profile url if you have" rel="noopener" target="_blank"><span>Name and Course of each team
-                  member</span></a>
+              <a href="https://www.linkedin.com/in/itsmeananyasrivastava" rel="noopener" target="_blank"><span>
+                  Ananya (B.Sc. (Hons.) Computer Science)
+                </span></a>
             </li>
+            <li>
+                <a href="https://github.com/Ishitva744" rel="noopener" target="_blank"><span>
+                  Ishitva Joshi (B.Sc. (Hons.) Computer Science)
+                </span></a>
+              </li>
           </ul>
           <h3>Mentors</h3>
           <ul class="ref-list">
-            <li><span> Mentor Name</span></li>
+            <li><span>Ms. Shiva Saini</span></li>
           </ul>
           <h3>Tools Used</h3>
           <ul class="tools-list">
@@ -289,6 +443,7 @@
     }
   </script>
   <script src="script.js"></script>
+  <script src="pattern.js"></script>
 </body>
 
 </html>

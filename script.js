@@ -110,11 +110,17 @@ function copyCode(elementId) {
 
 // Event listeners for radio buttons
 document
-  .getElementById("cppRadio")
-  .addEventListener("change", () => toggleCode("cpp"));
+  .getElementById("pyramidRadio")
+  .addEventListener("change", () => toggleCode("pyramid"));
 document
-  .getElementById("pythonRadio")
-  .addEventListener("change", () => toggleCode("python"));
+  .getElementById("rpyramidRadio")
+  .addEventListener("change", () => toggleCode("rpyramid"));
+document
+  .getElementById("squareRadio")
+  .addEventListener("change", () => toggleCode("square"));
+document
+  .getElementById("diamondRadio")
+  .addEventListener("change", () => toggleCode("diamond"));
 
 // Event listener for copy buttons
 document.querySelectorAll(".copy-button").forEach((button) => {
@@ -127,15 +133,19 @@ document.querySelectorAll(".copy-button").forEach((button) => {
 // Quiz Logic
 const questions = [
   {
-    question: "Q1) Which of the following is/are valid searching algorithms?",
-    choices: ["Linear Search", "Bubble Sort", "Binary Search", "Quick Sort"],
-    correctAnswers: [0, 2],
-  },
-  {
-    question: "Q2) What is/are the time complexity of linear search?",
-    choices: ["O(log n)", "O(n)", "O(n^2)", "O(1)"],
-    correctAnswers: [1],
-  },
+        question: "Q1) Which of the following statements is true?",
+        choices: ["A for loop can only be used with lists."
+        , "A while loop must have an explicit condition that eventually evaluates to False.", 
+        "A while loop is always more efficient than a for loop.", 
+        " A for loop cannot be nested inside another for loop."],
+        correctAnswers: [1] // Correct answers are indexes 1
+    },
+    {
+        question: " Q2) What is the purpose of the continue statement in a while loop?",
+        choices: ["a) It terminates the loop.", "b) It skips the current iteration and moves to the next iteration.",
+         "c) It restarts the loop.", "d) It causes the loop to exit immediately."],
+        correctAnswers: [1] // Correct answer is index 1
+    }
 ];
 
 let currentQuestionIndex = 0;
