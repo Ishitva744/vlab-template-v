@@ -16,6 +16,11 @@ body {
   overflow-x: hidden;
 }
 
+#quiz-instructions {
+  text-align: left;
+  margin-left: 20px; /* optional spacing */
+}
+
 /* Header styles */
 .header {
   display: flex;
