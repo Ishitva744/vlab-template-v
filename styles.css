@@ -357,6 +357,7 @@ body {
 #theory ol,
 #procedure ol {
   padding-left: 25px;
+  padding-top: 5px;
   margin-bottom: 20px;
   list-style-position: inside; /* Align markers with text */
   font-size: 1rem;
@@ -401,12 +402,14 @@ body {
 
 /* Code block styles */
 .switch-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-}
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  padding: 15px;
+  justify-items: stretch;
+  text-align: center;
+  align-items: stretch;
+  }
 
 input[type="radio"] {
   display: none;
@@ -823,6 +826,7 @@ input[type="radio"] {
   }
 
   .container {
+    font-size:2.5vw;
    padding: 3vh;
     margin: 0;
     text-align: left;
@@ -849,6 +853,19 @@ input[type="radio"] {
 
   .container .title {
     font-size: 1rem;
+  }
+
+  #theory ul, #procedure ul, #theory ol, #procedure ol {
+    font-size: 0.6rem;
+    padding-left: 10px;
+  }
+
+  #tnt .content span {
+    font-size: 0.8rem !important;
+  }
+
+  pre code.hljs {
+    font-size: 0.6rem;
   }
 }
 /* For very small screens */
@@ -907,6 +924,10 @@ input[type="radio"] {
 .obsv-image2 {
   height: 400px;
   width: 400px;
+}
+
+.desc {
+  margin-top: 18px;
 }
 
 @media screen and (max-width: 426px) {

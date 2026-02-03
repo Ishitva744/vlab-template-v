@@ -64,6 +64,7 @@ function pattern(ptype) {
 
       break;
 
+
     case "rpyramid":
       i = currentStep;
       stars = "  ".repeat(i) + "* ".repeat(2 * (rows - i) - 1);
@@ -77,6 +78,7 @@ function pattern(ptype) {
 
       break;
 
+
     case "sgrid":
       i = currentStep;
       stars = "* ".repeat(rows);
@@ -86,44 +88,90 @@ function pattern(ptype) {
       break;
 
     case "diamond":
+      let mid = Math.floor(rows / 2);
       i = currentStep;
-      if (i < rows / 2) {
-        stars = "  ".repeat(rows - i - 1) + "* ".repeat(2 * i + 1);
-        for (j = 0; j < rows - i - 1; j++) {}
-        for (k = 0; k < 2 * i + 1; k++) {}
 
-        document.getElementById("i-value").innerText = i;
-        document.getElementById("j-value").innerText = j;
-        document.getElementById("k-value").innerText = k;
-        document.getElementById("pattern-value").innerText = stars.trim();
+      if (i <= mid) {
+        j = mid - i; // spaces
+        k = 2 * i + 1; // stars
+        stars = " ".repeat(j) + "* ".repeat(k);
       } else {
-        let newrows = Math.floor(rows / 2);
-        stars += "  ";
-        stars = "  ".repeat(tempi) + "* ".repeat(2 * (newrows - tempi) - 1);
-        stars += "  ";
-        for (j = 0; j <= tempi; j++);
-        for (k = 0; k < 2 * (newrows - tempi) - 1; k++);
-
-        document.getElementById("i-value").innerText = tempi;
-        document.getElementById("j-value").innerText = j;
-        document.getElementById("k-value").innerText = k;
-        document.getElementById("pattern-value").innerText = stars.trim();
-
-        tempi++;
+        let down = i - mid;
+        j = down; // spaces
+        k = 2 * (rows - i) - 1; // stars
+        stars = " ".repeat(j) + "* ".repeat(k);
       }
+
+      document.getElementById("i-value").innerText = i;
+      document.getElementById("j-value").innerText = j;
+      document.getElementById("k-value").innerText = k;
+      document.getElementById("pattern-value").innerText = stars;
       break;
 
-    /* i = currentStep;
-      if (i < rows / 2) {
-        for (j = 0; j < rows - i - 1; j++) {}
-        for (k = 0; k < 2 * i + 1; k++) {}
-        stars = "  ".repeat(rows / 2 - i - 1) + "* ".repeat(2 * i + 1);
-      } else {
-        for (j = 0; j < i; j++);
-        for (k = 0; k < 2 * (rows - i) - 1; k++);
-        stars = "  ".repeat(i - rows / 2) + "* ".repeat(2 * (rows - i) - 1);
-      } */
+    
+      
+    case "rtriangle":
+      i = currentStep;
+      stars = "* ".repeat(i + 1);
 
+      document.getElementById("i-value").innerText = i;
+      document.getElementById("pattern-value").innerText = stars.trim();
+      break;
+
+    case "hpyramid":
+      i = currentStep;
+      if (i === rows - 1) {
+        stars = "* ".repeat(2 * i + 1);
+      } else {
+        let line = "";
+        for (k = 0; k <= 2 * i; k++) {
+          if (k === 0 || k === 2 * i) line += "* ";
+          else line += "  ";
+        }
+        stars = " ".repeat(rows - i - 1) + line;
+      }
+      document.getElementById("pattern-value").innerText = stars;
+      break;
+
+
+    case "hsquare":
+      i = currentStep;
+      stars = "";
+      for (j = 0; j < rows; j++) {
+        if (i === 0 || i === rows - 1 || j === 0 || j === rows - 1) {
+          stars += "* ";
+        } else {
+          stars += "  ";
+        }
+      }
+      document.getElementById("pattern-value").innerText = stars;
+      break;
+
+
+    case "hdiamond":
+      let midH = Math.floor(rows / 2);
+      i = currentStep;
+      if (i <= midH) {
+        let line = "";
+        for (k = 0; k <= 2 * i; k++) {
+          if (k === 0 || k === 2 * i) line += "* ";
+          else line += "  ";
+        }
+        stars = " ".repeat(midH - i) + line;
+      } else {
+        let down = i - midH;
+        let line = "";
+        for (k = 0; k < 2 * (rows - i) - 1; k++) {
+          if (k === 0 || k === 2 * (rows - i) - 2) line += "* ";
+          else line += "  ";
+        }
+        stars = " ".repeat(down + 1) + line;
+      }
+      document.getElementById("pattern-value").innerText = stars;
+      break;
+
+
+        
     default:
       break;
   }

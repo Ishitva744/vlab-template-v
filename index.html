@@ -117,28 +117,29 @@
       <div class="container" id="theory">
         <div class="title">Theory & Applications</div>
         <div class="content">
-          <p class="desc">
+          <p>
             Loops are fundamental constructs in programming that allow us to execute a block of code repeatedly. They are essential for tasks that require iteration, 
             such as processing items in a list, generating sequences, or performing repetitive calculations.
-            <br><br>
+          </p>
+          <p class="desc">
             <b>For Loops</b>
             <br>
             A for loop is used to iterate over a sequence (such as a list, tuple, dictionary, set, or string).
             The syntax is straightforward and allows for easy traversal of elements.
-            <br><br>
+          <p class="desc">
             <b>Nested For Loops</b>
             <br>
             Nested loops are loops within loops. 
             They are useful for working with multi-dimensional data structures, such as lists of lists (matrices).
-            <br><br>
+          </p>
+          <p class="desc">
             <b>Benefits of Using Loops</b>
-            <br>
             <ul style="margin-left:20px;">
               <li><b>Efficiency:</b> Loops reduce the need for repetitive code, making programs more efficient and easier to read.</li>
               <li><b>Automation</b> They automate repetitive tasks, saving time and reducing the likelihood of errors.</li>
               <li><b>Flexibility:</b> Loops can handle varying amounts of data, making them adaptable to different sceneriors.</li>
             </ul>
-            </p>
+          </p>
         </div>
       </div>
 
@@ -187,24 +188,55 @@
           <iframe frameBorder="0" height="450px" id="oc-editor" title="Code-Runner" src="./embed.html" width="100%" allow="fullscreen"></iframe>
           <p>Example programs</p>
           <div class="switch-container">
-          <input class="togswt" type="radio" id="pyramidRadio" name="codeSwitch"/>
-          <label for="pyramidRadio">Pyramid</label>
+            <input class="togswt" type="radio" id="rtriangleRadio" name="codeSwitch"/>
+            <label for="rtriangleRadio">Right Triangle</label>
+            
+            <input class="togswt" type="radio" id="pyramidRadio" name="codeSwitch"/>
+            <label for="pyramidRadio">Pyramid</label>
+            
+            <input class="togswt" type="radio" id="rpyramidRadio" name="codeSwitch"/>
+            <label for="rpyramidRadio">Reverse Pyramid</label>
+
+            <input class="togswt" type="radio" id="hpyramidRadio" name="codeSwitch"/>
+            <label for="hpyramidRadio">Hollow Pyramid</label>
+
+            <input class="togswt" type="radio" id="squareRadio" name="codeSwitch"/>
+            <label for="squareRadio">Square Grid</label>
+
+            <input class="togswt" type="radio" id="hsquareRadio" name="codeSwitch"/>
+            <label for="hsquareRadio">Hollow Square</label>
+
+            <input class="togswt" type="radio" id="diamondRadio" name="codeSwitch"/>
+            <label for="diamondRadio">Diamond</label>
+
+            <input class="togswt" type="radio" id="hdiamondRadio" name="codeSwitch"/>
+            <label for="hdiamondRadio">Hollow Diamond</label>
+          </div>
+
+          <div class="code-blocks">
+            <div id="rtriangleCode" class="code-block ">
+              <div class="code-content">
+                <pre><code class="language-js">
+//Code for Right Triangle
+let num = 5; //change number of rows
+let pattern = '';
+for (let i = 0; i < num; i++) {
+    for (let j = 0; j <= i; j++) {
+        pattern += '* ';
+    }
+    pattern += '\n';
+}
+console.log(pattern);
+                </code></pre>
+                <button class="copy-button">Copy</button>
+              </div>
+            </div>
           
-          <input class="togswt" type="radio" id="rpyramidRadio" name="codeSwitch"/>
-          <label for="rpyramidRadio">Reverse Pyramid</label>
 
-          <input class="togswt" type="radio" id="squareRadio" name="codeSwitch"/>
-          <label for="squareRadio">Square Grid</label>
-
-          <input class="togswt" type="radio" id="diamondRadio" name="codeSwitch"/>
-          <label for="diamondRadio">Diamond</label>
-          
-        </div>
-
-        <div class="code-blocks">
-          <div id="pyramidCode" class="code-block ">
-            <div class="code-content">
-              <pre><code class="language-js">
+        
+            <div id="pyramidCode" class="code-block ">
+              <div class="code-content">
+                <pre><code class="language-js">
 //Code for Pyramid Pattern
 let num = 5; //change number of rows
 let pattern = '';
@@ -218,14 +250,15 @@ for (let i = 0; i < num; i++) {
   pattern += '\n';
 }
 console.log(pattern);
-              </code></pre>
-              <button class="copy-button">Copy</button>
+                </code></pre>
+                <button class="copy-button">Copy</button>
+              </div>
             </div>
-          </div>
+        
 
-          <div id="rpyramidCode" class="code-block ">
-            <div class="code-content">
-              <pre><code class="language-js">
+            <div id="rpyramidCode" class="code-block ">
+              <div class="code-content">
+                <pre><code class="language-js">
 //Code for Reverse Pyramid Pattern
 let num = 5; //change number of rows
 let pattern = '';
@@ -239,14 +272,41 @@ for (let i = 0; i < num; i++) {
   pattern += '\n';
 }
 console.log(pattern);
-              </code></pre>
-              <button class="copy-button">Copy</button>
+                </code></pre>
+                <button class="copy-button">Copy</button>
+              </div>
             </div>
-          </div>
 
-          <div id="squareCode" class="code-block ">
-            <div class="code-content">
-              <pre><code class="language-js">
+          
+            <div id="hpyramidCode" class="code-block ">
+              <div class="code-content">
+                <pre><code class="language-js">
+//Code for Hollow Pyramid
+let num = 5; //change number of rows
+let pattern = '';
+for (let i = 0; i < num; i++) {
+    for (let j = 0; j < num - i - 1; j++) {
+        pattern += ' ';
+    }
+    for (let k = 0; k < 2 * i + 1; k++) {
+        if (k == 0 || k == 2 * i || i == num - 1) {
+            pattern += '*';
+        } else {
+            pattern += ' ';
+        }
+    }
+    pattern += '\n';
+}
+console.log(pattern);
+                </code></pre>
+                <button class="copy-button">Copy</button>
+              </div>
+            </div>
+
+
+            <div id="squareCode" class="code-block ">
+              <div class="code-content">
+                <pre><code class="language-js">
 //Code for Square Grid Pattern
 let num = 5; //change number of rows
 let pattern = '';
@@ -255,14 +315,37 @@ for (let i = 0; i < num; i++) {
   pattern += '\n';
 }
 console.log(pattern);
-              </code></pre>
-              <button class="copy-button">Copy</button>
+                </code></pre>
+                <button class="copy-button">Copy</button>
+              </div>
             </div>
-          </div>
 
-          <div id="diamondCode" class="code-block ">
-            <div class="code-content">
-              <pre><code class="language-js">
+          
+            <div id="hsquareCode" class="code-block ">
+              <div class="code-content">
+                <pre><code class="language-js">
+//Code for Hollow Square
+let num = 5; //change number of rows
+let pattern = '';
+for (let i = 0; i < num; i++) {
+    for (let j = 0; j < num; j++) {
+        if (i == 0 || i == num - 1 || j == 0 || j == num - 1) {
+            pattern += '* ';
+        } else {
+            pattern += '  ';
+        }
+    }
+    pattern += '\n';
+}
+console.log(pattern);
+                </code></pre>
+                <button class="copy-button">Copy</button>
+              </div>
+            </div>
+
+            <div id="diamondCode" class="code-block ">
+              <div class="code-content">
+                <pre><code class="language-js">
 //Code for Diamond Pattern
 let num = 5; //change number of rows
 let pattern = '';
@@ -291,12 +374,53 @@ pattern += '\n  '; //extra space
 }
 
 console.log(pattern);   //printing star to console
-              </code></pre>
-              <button class="copy-button">Copy</button>
+                </code></pre>
+                <button class="copy-button">Copy</button>
+              </div>
             </div>
-          </div>
+
+
+            <div id="hdiamondCode" class="code-block ">
+              <div class="code-content">
+                <pre><code class="language-js">
+//Code for Hollow Diamond
+let num = 5; //change number of rows
+let pattern = '';
+// Upper half
+for (let i = 0; i < num; i++) {
+    for (let j = 0; j < num - i - 1; j++) {
+        pattern += ' ';
+    }
+    for (let k = 0; k < 2 * i + 1; k++) {
+        if (k == 0 || k == 2 * i) {
+            pattern += '*';
+        } else {
+            pattern += ' ';
+        }
+    }
+    pattern += '\n';
+}
+// Lower half
+for (let i = num - 2; i >= 0; i--) {
+    for (let j = 0; j < num - i - 1; j++) {
+        pattern += ' ';
+    }
+    for (let k = 0; k < 2 * i + 1; k++) {
+        if (k == 0 || k == 2 * i) {
+            pattern += '*';
+        } else {
+            pattern += ' ';
+        }
+    }
+    pattern += '\n';
+}
+console.log(pattern);
+                </code></pre>
+                <button class="copy-button">Copy</button>
+              </div>
+            </div>
           
-        </div>
+          </div>
         </div>
       </div>
 
@@ -310,9 +434,13 @@ console.log(pattern);   //printing star to console
             2. Select type of pattern:
             <select id="type" onchange="toggleSubmit()">
               <option value="sgrid" selected>Square Grid</option>
+              <option value="hsquare">Hollow Square</option>
+              <option value="rtriangle">Right Triangle</option>
               <option value="pyramid">Pyramid</option>
               <option value="rpyramid">Reverse pyramid</option>
+              <option value="hpyramid">Hollow Pyramid</option>
               <option value="diamond">Diamond</option>
+              <option value="hdiamond">Hollow Diamond</option>
             </select>
             <br />
             <button id="submit" class="submitButton">Submit</button>
@@ -424,9 +552,6 @@ console.log(pattern);   //printing star to console
           </ul>
           <h3>Tools Used</h3>
           <ul class="tools-list">
-            <li>
-              <span> Add tools used here </span>
-            </li>
             <li>
               <span>Vanilla HTML, CSS, JS - for creating the web page</span>
             </li>

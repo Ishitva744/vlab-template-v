@@ -110,17 +110,29 @@ function copyCode(elementId) {
 
 // Event listeners for radio buttons
 document
+  .getElementById("rtriangleRadio")
+  .addEventListener("change", () => toggleCode("rtriangle"));
+document
   .getElementById("pyramidRadio")
   .addEventListener("change", () => toggleCode("pyramid"));
 document
   .getElementById("rpyramidRadio")
   .addEventListener("change", () => toggleCode("rpyramid"));
 document
+  .getElementById("hpyramidRadio")
+  .addEventListener("change", () => toggleCode("hpyramid"));
+  document
   .getElementById("squareRadio")
   .addEventListener("change", () => toggleCode("square"));
 document
+  .getElementById("hsquareRadio")
+  .addEventListener("change", () => toggleCode("hsquare"));
+  document
   .getElementById("diamondRadio")
   .addEventListener("change", () => toggleCode("diamond"));
+document
+  .getElementById("hdiamondRadio")
+  .addEventListener("change", () => toggleCode("hdiamond"));
 
 // Event listener for copy buttons
 document.querySelectorAll(".copy-button").forEach((button) => {
