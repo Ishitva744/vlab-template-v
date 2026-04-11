@@ -76,6 +76,49 @@
             white-space: pre-wrap;
             word-wrap: break-word;
         }
+        @media (max-width: 440px) {
+
+            body {
+                align-items: flex-start;
+                padding: 10px;
+                height: auto;
+            }
+
+            .container {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+            .editor-container {
+                height: auto;
+                padding: 8px;
+            }
+
+            .editor {
+                height: 200px;
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                gap: 8px;
+                padding: 8px;
+            }
+
+            .buttons button {
+                width: 100%;
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            #output {
+                font-size: 13px;
+                min-height: 80px;
+                padding: 8px;
+            }
+        }
     </style>
 </head>
 <body>

@@ -104,13 +104,9 @@
       <div class="container" id="aim">
         <div class="title">Aim</div>
         <div class="content">
-          <p>
-            In this virtual lab, students will gain hands-on experience 
-              with for and while loops through a guided, interactive exercise.
-              They will understand how loops work, simplify repetitive tasks and manage complex 
-              iterations to enhance their coding efficiency. This lab aims to demystify 
-              the iteration process, making it accessible and intuitive for all learners
-          </p>
+          The aim of this virtual lab is to provide students with hands-on experience in implementing for and while loops 
+          through guided, interactive exercises. By visualizing loop execution, they can develop a clear understanding of 
+          iteration and apply loops effectively to simplify repetitive tasks and enhance their coding efficiency.        
         </div>
       </div>
 
@@ -118,31 +114,49 @@
       <div class="container" id="theory">
         <div class="title">Theory & Applications</div>
         <div class="content">
+          <h3>Loops</h3>
           <p>
-            Loops are fundamental constructs in programming that allow us to execute a block of code repeatedly. They are essential for tasks that require iteration, 
-            such as processing items in a list, generating sequences, or performing repetitive calculations.
+            Loops are fundamental constructs in programming that allow us to execute a block of code repeatedly according to a specific condition. They are essential for tasks that require iteration, 
+            such as processing items in a list, generating sequences, or performing repetitive calculations. They enable us to write DRY (Don't Repeat Yourself) code for efficiency. Two of the most 
+            common types of loops include the <code>for</code> loop and <code>while</code> loop.  
           </p>
-          <p class="desc">
-            <b>For Loops</b>
-            <br>
-            A for loop is used to iterate over a sequence (such as a list, tuple, dictionary, set, or string).
-            The syntax is straightforward and allows for easy traversal of elements.
+          <br>
+          <p><b>Benefits of Using Loops</b></p>
+          <ol type="i">
+            <li>Efficiency: Loops reduce the need for repetitive code, making programs more efficient and easier to read.</li>
+            <li>Automation They automate repetitive tasks, saving time and reducing the likelihood of errors.</li>
+            <li>Flexibility: Loops can handle varying amounts of data, making them adaptable to different scenarios.</li>
+          </ol>
+          <h3>For Loops</h3>
+          <p> 
+            A <code>for</code> loop is used to iterate over a definite sequence (such as a list, tuple, dictionary, set, or string) or a known range. 
+            It is controlled by the length of the sequence or range. The syntax typically involves intialisation, condition, and update at a single step.
           </p>
-          <p class="desc">
-            <b>Nested For Loops</b>
-            <br>
-            Nested loops are loops within loops. 
-            They are useful for working with multi-dimensional data structures, such as lists of lists (matrices).
-          </p>
-          <div class="desc">
-            <b>Benefits of Using Loops</b>
-            <ul style="margin-left:20px;">
-              <li><b>Efficiency:</b> Loops reduce the need for repetitive code, making programs more efficient and easier to read.</li>
-              <li><b>Automation</b> They automate repetitive tasks, saving time and reducing the likelihood of errors.</li>
-              <li><b>Flexibility:</b> Loops can handle varying amounts of data, making them adaptable to different sceneriors.</li>
-            </ul>
-          </div>
+          <br>
+          
+          <h3>While Loops</h3>
+          <p>
+            A <code>while</code> loop is used to repeat a set of instructions until a specific condition is met.
+            It is a type of indefinite iteration, where we do not know the number of times the loop body needs to be executed.
+            The syntax requires separate initilisation before and update inside the loop body.
+          </p>  
+          <br>
 
+          <h3>Nested Loops</h3>
+          <p>
+            Nested loops are loops within loops. They are useful for working with multi-dimensional data structures, such as lists of lists (matrices).
+            The inner loop completes all of its iterations for each iteration of the outer loop.
+          </p> <br>
+          
+          <br>
+          <h3>Application of Loops</h3>
+          <ol type="i">
+            <li><b>Database Record Processing</b>: When a backend system queries a database and gets back records, it uses loops 
+              to cycle through each record to generate any report.</li>
+            <li><b>Security & Input validation</b>: Systems often use loops to prompt login retry for an incorrect attempt under a limit.</li>
+            <li><b>Social Media Feeds</b>: These apps use loops to generate UI components to display content by iterating through a list of posts.</li>
+          </ol>
+          
         </div>
       </div>
 
@@ -150,36 +164,39 @@
       <div class="container" id="procedure">
         <div class="title">Procedure</div>
         <div class="content">
-          <p class="desc1">What we are going to do, i.e. the steps involved.</p><br>
-              <h4>Execution of a <b>For</b> Loop</h4><br>
-              <ol style="margin-left:10px;" type="i">
-                <li>Initialization: The loop control variable is initialized (e.g., i = 0).</li>
-                <li>Condition Check: The loop checks if the condition is true (e.g., i  10). If true, it executes the loop body.</li>
-                <li>Loop Body: The statements inside the loop are executed.</li>
-                <li>Update: The loop control variable is updated (e.g., i += 1).</li>
-                <li>Recheck Condition: The loop checks the condition again. If true, it repeats; if false, the loop terminates.</li>
+          <div>
+            <h3><b>Execution of For loops</b></h3>
+            The structure of the loop (See Figure 1.1) involves the following steps:
+            <br>
+            <ol type="i">
+              <li>Initialisation: The loop control variable is initialized (e.g., i = 0).</li>
+              <li>Condition Check: The loop checks if the condition is true (e.g., i &lt; 10). If true, it executes the loop body. If false, the loop terminates.</li>
+              <li>Loop Body: The statements inside the loop which are to be executed.</li>
+              <li>Update: The loop control variable is updated (e.g., i += 1).</li>
+              <li>Recheck Condition: The loop checks the condition again. If true, it repeats. If false, the loop terminates.</li>
             </ol>
-            <div class="normal">
-              <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190328142225/loop2.png"
-                    alt="" class="obsv-image1">    
-              <div class="caption">Fig 1.1 Flowchart of for loop</div>
-            </div>
-            
+          </div>
+          
+          <div class="normal">
+            <img src="./images/for-loop.png" alt="" class="image1">    
+            <div class="caption">Fig 1.1: Flowchart of for loop</div>
+          </div>
 
-            <h4>Execution of a while Loop</h4><br>
-            <div class="desc">
-               <ol>
-                <li>Condition Check: The loop checks if the condition is true (e.g., i < 10). If true, it executes the loop body.</li>
-                <li>Loop Body: The statements inside the loop are executed. The control variable should be updated inside the loop to ensure the condition eventually becomes false.</li>
-                <li>Recheck Condition: After the loop body, the condition is checked again. If true, it repeats; if false, the loop terminates.</li>
-              </ol>
-            </div>
-            <div class="normal">
-              <img src="https://www.programiz.com/sites/tutorial2program/files/python-while-loop-flowchart.png"
-                    alt="" class="obsv-image2">
-              <div class="caption">Fig 1.2 Flowchart of while loop</div>
-            </div>
-        </div>
+          <div>
+            <h3><b>Execution of While Loops</b></h3>
+            The structure of the loop (See Figure 1.2) involves the following steps:
+            <ol>
+              <li>Condition Check: The loop checks if the condition is true or false (e.g., i &lt; 10). If true, it executes the loop body, otherwise the loop teminates.</li>
+              <li>Loop Body: The statements inside the loop are executed. The control variable should be updated inside the loop to ensure the condition eventually becomes false.</li>
+              <li>Recheck Condition: After the loop body, the condition is checked again. If true, it repeats. If false, the loop terminates.</li>
+            </ol>
+          </div>
+          <div class="normal">
+            <img src="./images/while-loop.png" alt="" class="image2">
+            <div class="caption">Fig 1.2: Flowchart of while loop</div>
+          </div>
+          
+        </div>    
       </div>
 
       <!-- Code -->
@@ -189,28 +206,6 @@
         <div>
           <iframe frameBorder="0" height="450px" id="oc-editor" title="Code-Runner" src="./embed.html" width="100%" allow="fullscreen"></iframe>
         </div>
-        <!-- <div class="switch-container">
-          <input class="togswt" type="radio" id="cppRadio" name="codeSwitch" checked />
-          <label for="cppRadio">C++</label>
-
-          <input class="togswt" type="radio" id="pythonRadio" name="codeSwitch" />
-          <label for="pythonRadio">Python</label>
-        </div> -->
-
-        <!-- <div class="code-blocks">
-          <div id="cppCode" class="code-block active">
-            <div class="code-content">
-              <pre><code class="language-cpp">// C++ Code Example</code></pre>
-              <button class="copy-button">Copy</button>
-            </div>
-          </div>
-          <div id="pythonCode" class="code-block">
-            <div class="code-content">
-              <pre><code class="language-python"># Python Code Example</code></pre>
-              <button class="copy-button">Copy</button>
-            </div>
-          </div>
-        </div> -->
       </div>
 
       <!-- Practice -->
@@ -252,7 +247,7 @@
                 <button class="sym-btn"        onclick="setSymbol('■', this)">■</button>
               </div>
 
-              <div class="section-label">Grid Size (n)</div>
+              <div class="section-label">rows (n)</div>
               <div class="slider-row">
                 <span class="slider-name">n =</span>
                 <span class="slider-val" id="sizeVal">8</span>
@@ -426,7 +421,10 @@
               <span> CSS </span>
             </li>
             <li>
-              <span> JavaScript - for creating the web page</span>
+              <span> JavaScript</span>
+            </li>
+            <li>
+              <span>Figma - for creating flowcharts</span>
             </li>
           </ul>
         </div>
