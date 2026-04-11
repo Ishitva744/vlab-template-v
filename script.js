@@ -109,32 +109,78 @@ function copyCode(elementId) {
 }
 
 // Event listeners for radio buttons
-document
+/* document
   .getElementById("cppRadio")
   .addEventListener("change", () => toggleCode("cpp"));
 document
   .getElementById("pythonRadio")
-  .addEventListener("change", () => toggleCode("python"));
+  .addEventListener("change", () => toggleCode("python")); */
 
 // Event listener for copy buttons
-document.querySelectorAll(".copy-button").forEach((button) => {
+/* document.querySelectorAll(".copy-button").forEach((button) => {
   button.addEventListener("click", function () {
     const language = button.closest(".code-block").id.replace("Code", "");
     copyCode(language + "Code");
   });
-});
+}); */
 
 // Quiz Logic
 const questions = [
   {
-    question: " Q1) Which of the following is/are valid searching algorithms?",
-    choices: ["Linear Search", "Bubble Sort", "Binary Search", "Quick Sort"],
-    correctAnswers: [0, 2]
+    question: "Q1) Which of the following statements is true?",
+    choices: ["A for loop can only be used with lists.", 
+      "A while loop must have an explicit condition that eventually evaluates to False.", 
+      "A while loop is always more efficient than a for loop.", 
+      " A for loop cannot be nested inside another for loop."],
+      correctAnswers: [1] // Correct answers are indexes 1
   },
   {
-    question: " Q2) What is/are the time complexity of linear search?",
-    choices: ["O(log n)", "O(n)", "O(n^2)", "O(1)"],
+    question: "Q2) What is the purpose of the continue statement in a while loop?",
+    choices: [ "a) It terminates the loop.", 
+      "b) It skips the current iteration and moves to the next iteration.",
+      "c) It restarts the loop.", 
+      "d) It causes the loop to exit immediately."],
+      correctAnswers: [1] 
+  },
+  {
+    question: "Q3) What will be the output of the following code?\nfor (let i = 0; i < 3; i++) { console.log(i); }",
+    choices: [
+      "0 1 2",
+      "1 2 3",
+      "0 1 2 3",
+      "Infinite loop"
+    ],
+    correctAnswers: [0]
+  },
+  {
+    question: "Q4) When does a while loop stop executing?",
+    choices: [
+      "When the condition becomes true",
+      "When the condition becomes false",
+      "After one iteration",
+      "Only when break is used"
+    ],
     correctAnswers: [1]
+  },
+  {
+    question: "Q5) What is the initial step in a for loop?",
+    choices: [
+      "Condition check",
+      "Increment/Decrement",
+      "Initialization",
+      "Loop termination"
+    ],
+    correctAnswers: [2]
+  },
+  {
+    question: "Q6) What will happen if the condition in a while loop never becomes false?",
+    choices: [
+      "The loop runs only once",
+      "The loop will stop automatically",
+      "The loop becomes infinite",
+      "The loop throws an error immediately"
+    ],
+    correctAnswers: [2]
   },
 ];
 
